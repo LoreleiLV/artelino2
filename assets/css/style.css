@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@200&display=swap');
+
+body{
+    font-family: Noto Serif;
+}
+
+*{ margin: 0;
+}
+
+header {
+    grid-area: header;
+    background-color:rgb(53, 150, 150);
+    background-size: cover;
+    color: #0e0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #c27878;
+    color: #eeedee;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+aside a{
+    color: #eeedee;
+    text-decoration: none; 
+}
+
+aside  li:hover{
+	transform: scale(1.05);filter: opacity(0.5);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+    
+ul{
+    text-align: left;
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    list-style: none;
+}
+
+main{
+    grid-area: main;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(53, 150, 150);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2e2d29;     
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    gap: 10px;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 13% auto 10%;
+    height: 100vh;
+}
+
+.galeria{
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-item{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.8rem;
+}
+
+.main-item img{
+    height: 300px;
+    min-height: 200px;
+    width:90%;
+    margin: 0.8rem;
+    cursor: pointer;   
+}
+
+.price {
+    font-size: 2rem;
+}
+
+.main-item img:hover{
+	transform: scale(1.05);filter: opacity(.5);
+    border-radius: 1rem;
+}
+
+.logo{ height: 2rem;}
+
+button:hover{
+    background-color: #989162;
+    transform: scale(1.1);
+    width: 13%;
+}
+
+button a { 
+    text-decoration: none;
+    color:#eeedee ;
+    font-family: Noto Serif;
+    }
+
+button{
+    width: 30%;
+    background-color: #39a79d;
+    border-radius: 3rem;
+}
